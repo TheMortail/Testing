@@ -13,3 +13,7 @@
 
 2. in intellij terminal:<br>
   webdriver-manager update
+
+
+#Cypress<br>
+Start = yarn run cypress open
