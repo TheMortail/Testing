@@ -4,7 +4,7 @@
   Should work out of the box
 
 #Java Frontend<br>
-  yarn install / npm install
+  yarn install / npm install<br>
   npm run
 
 #Angular
