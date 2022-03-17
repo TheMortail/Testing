@@ -16,4 +16,4 @@
 
 
 #Cypress<br>
-Start = yarn run cypress open
+  yarn run cypress open
