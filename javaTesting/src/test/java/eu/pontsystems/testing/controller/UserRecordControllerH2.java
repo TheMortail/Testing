@@ -92,6 +92,7 @@ class UserRecordControllerH2 {
                 .age(35)
                 .address("Pusztakotkodács")
                 .build();
+        System.out.println(updatedRecord);
 
         MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders.put("/user")
                 .contentType(MediaType.APPLICATION_JSON)

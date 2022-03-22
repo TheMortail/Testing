@@ -40,6 +40,10 @@ class UserRecordControllerTest {
 
         Mockito.when(userRecordRepository.findAll()).thenReturn(records);
 
+        System.out.println("---///Records\\\\\\---");
+        records.forEach(System.out::println);
+        System.out.println("---///Records\\\\\\---");
+
         mockMvc.perform(MockMvcRequestBuilders
                 .get("/user")
                 .contentType(MediaType.APPLICATION_JSON))
