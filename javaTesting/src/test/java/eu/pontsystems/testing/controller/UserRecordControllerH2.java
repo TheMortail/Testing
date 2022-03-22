@@ -37,6 +37,7 @@ class UserRecordControllerH2 {
     @DisplayName("Get all records")
     void getAllRecords_success() throws Exception {
         List<UserRecord> records = userRecordRepository.findAll();
+
         System.out.println("---///Records\\\\\\---");
         records.forEach(System.out::println);
         System.out.println("---///Records\\\\\\---");
@@ -69,6 +70,7 @@ class UserRecordControllerH2 {
                 .age(20)
                 .address("Budapest")
                 .build();
+        System.out.println(record);
 
         MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders.post("/user")
                 .contentType(MediaType.APPLICATION_JSON)
