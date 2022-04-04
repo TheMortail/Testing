@@ -18,7 +18,7 @@ class CalculatorTest {
     }
 
     @Test
-    void multiple() {
+    void multiply() {
         assertEquals(4, calculator.multiply(2,2), "ERROR: 2*2 != 4?");
     }
 
