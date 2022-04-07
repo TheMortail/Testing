@@ -11,10 +11,8 @@ https://docs.google.com/presentation/d/1mRHrVSXmQsniUTl-zwPG4kcPa8xi7MYZhjHuhjCA
   npm run
 
 #Angular<br>
-  yarn install
-
-in terminal:<br>
-  webdriver-manager update
+  yarn install<br>
+  in terminal:  webdriver-manager update <br>
 
 #Cypress<br>
   yarn run cypress open
