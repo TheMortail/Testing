@@ -1,6 +1,6 @@
 # Testing
 
-#PPT
+#PPT <br>
 https://docs.google.com/presentation/d/1mRHrVSXmQsniUTl-zwPG4kcPa8xi7MYZhjHuhjCAfSI/edit?usp=sharing <br>
 
 #Java<br>
@@ -10,13 +10,11 @@ https://docs.google.com/presentation/d/1mRHrVSXmQsniUTl-zwPG4kcPa8xi7MYZhjHuhjCA
   yarn install / npm install<br>
   npm run
 
-#Angular
-1. in terminal:<br>
+#Angular<br>
   yarn install
 
-2. in intellij terminal:<br>
+in terminal:<br>
   webdriver-manager update
-
 
 #Cypress<br>
   yarn run cypress open
