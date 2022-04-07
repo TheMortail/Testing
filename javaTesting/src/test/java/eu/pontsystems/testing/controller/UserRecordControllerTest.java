@@ -50,6 +50,7 @@ class UserRecordControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(2)))
                 .andExpect(jsonPath("$[0].name", is("Teszt Géza")));
+
     }
 
     @Test
@@ -63,6 +64,7 @@ class UserRecordControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", notNullValue()))
                 .andExpect(jsonPath("$.name", is("Teszt Géza")));
+
     }
 
     @Test
@@ -85,6 +87,7 @@ class UserRecordControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", notNullValue()))
                 .andExpect(jsonPath("$.name", is("Teszt Péter")));
+
     }
 
     @Test
@@ -109,6 +112,7 @@ class UserRecordControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", notNullValue()))
                 .andExpect(jsonPath("$.name", is("Teszt Gábor")));
+
     }
 
     @Test
@@ -131,6 +135,7 @@ class UserRecordControllerTest {
                         assertTrue(result.getResolvedException() instanceof UserRecordController.InvalidRequestException))
                 .andExpect(result ->
                         assertEquals("UserRecord or ID must not be null!", Objects.requireNonNull(result.getResolvedException()).getMessage()));
+
     }
 
     @Test
@@ -156,6 +161,7 @@ class UserRecordControllerTest {
                         assertTrue(result.getResolvedException() instanceof UserRecordController.InvalidRequestException))
                 .andExpect(result ->
                         assertEquals("User with ID 5 does not exist.", Objects.requireNonNull(result.getResolvedException()).getMessage()));
+
     }
 
     @Test
@@ -168,6 +174,7 @@ class UserRecordControllerTest {
                 .delete("/user/2")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
+
     }
 
     @Test
@@ -183,5 +190,7 @@ class UserRecordControllerTest {
                         assertTrue(result.getResolvedException() instanceof UserRecordController.InvalidRequestException))
                 .andExpect(result ->
                         assertEquals("User with ID 5 does not exist.", Objects.requireNonNull(result.getResolvedException()).getMessage()));
+
     }
+
 }

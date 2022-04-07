@@ -12,6 +12,7 @@ export default class UserList extends React.Component {
             .then(res => {
                 const posts = res.data;
                 this.setState({ posts });
+
             })
     }
 

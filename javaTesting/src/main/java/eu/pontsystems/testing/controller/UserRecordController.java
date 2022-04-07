@@ -20,17 +20,20 @@ public class UserRecordController {
     @GetMapping()
     public List<UserRecord> getAllRecords() {
         return userRecordRepository.findAll();
+
     }
 
     @GetMapping(value = "{userId}")
     public ResponseEntity<UserRecord> getUserById(@PathVariable(value="userId") Long userId) {
         Optional<UserRecord> userRecord = userRecordRepository.findById(userId);
         return ResponseEntity.of(Optional.of(userRecord.orElse(null)));
+
     }
 
     @PostMapping
     public ResponseEntity<UserRecord> createRecord(@RequestBody UserRecord userRecord){
         return ResponseEntity.of(Optional.of(userRecordRepository.save(userRecord)));
+
     }
 
     @PutMapping
@@ -49,6 +52,7 @@ public class UserRecordController {
         existingUserRecord.setAddress(userRecord.getAddress());
 
         return ResponseEntity.of(Optional.of(userRecordRepository.save(existingUserRecord)));
+
     }
 
     @DeleteMapping(value = "{userId}")
@@ -57,6 +61,7 @@ public class UserRecordController {
             throw new InvalidRequestException("User with ID " + userId + " does not exist.");
         }
         userRecordRepository.deleteById(userId);
+
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)

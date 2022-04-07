@@ -48,6 +48,7 @@ class UserRecordControllerH2 {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(3)))
                 .andExpect(jsonPath("$[0].name", is("Teszt Géza")));
+
     }
 
     @Test
@@ -59,6 +60,7 @@ class UserRecordControllerH2 {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", notNullValue()))
                 .andExpect(jsonPath("$.name", is("Teszt Aladár")));
+
     }
 
     @Test
@@ -81,6 +83,7 @@ class UserRecordControllerH2 {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", notNullValue()))
                 .andExpect(jsonPath("$.name", is("Teszt Peter")));
+
     }
 
     @Test
@@ -103,6 +106,7 @@ class UserRecordControllerH2 {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", notNullValue()))
                 .andExpect(jsonPath("$.name", is("Teszt Gábor")));
+
     }
 
     @Test
@@ -125,6 +129,7 @@ class UserRecordControllerH2 {
                         assertTrue(result.getResolvedException() instanceof UserRecordController.InvalidRequestException))
                 .andExpect(result ->
                         assertEquals("UserRecord or ID must not be null!", Objects.requireNonNull(result.getResolvedException()).getMessage()));
+
     }
 
     @Test
@@ -148,6 +153,7 @@ class UserRecordControllerH2 {
                         assertTrue(result.getResolvedException() instanceof UserRecordController.InvalidRequestException))
                 .andExpect(result ->
                         assertEquals("User with ID 5 does not exist.", Objects.requireNonNull(result.getResolvedException()).getMessage()));
+
     }
 
     @Test
@@ -170,5 +176,7 @@ class UserRecordControllerH2 {
                         assertTrue(result.getResolvedException() instanceof UserRecordController.InvalidRequestException))
                 .andExpect(result ->
                         assertEquals("User with ID 5 does not exist.", Objects.requireNonNull(result.getResolvedException()).getMessage()));
+
     }
+
 }
